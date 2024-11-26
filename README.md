@@ -1,4 +1,4 @@
-# MartinSM850DMXReceiver
+# Martin SM850 DMX-Receiver
 Adapter from DMX to Martin fog control for Martin SM850
 
 ## Hardware
