@@ -49,19 +49,24 @@ void flush_DMX()
  *      PCINT8-13 (PortC)(A0-A5): Bit 4...9 of DMX address --> Interrupt PCINT1
  */
 void init_DIP_switch() {
+    // Set address valid LED to output (Pin D7)
+    DDRD |= (1 << DDD7);
     // Set pull-up for DIP switch input pins
-    PORTC |= (1<<PORTC5)|(1<<PORTC4)|(1<<PORTC3)|(1<<PORTC2)|(1<<PORTC1)|(1<<PORTC0);
-    PORTD |= (1<<PORTD6)|(1<<PORTD5)|(1<<PORTD4)|(1<<PORTD3);
+    PORTC |= (1 << PORTC5) | (1 << PORTC4) | (1 << PORTC3) | (1 << PORTC2) | (1 << PORTC1) | (1 << PORTC0);
+    PORTD |= (1 << PORTD6) | (1 << PORTD5) | (1 << PORTD4) | (1 << PORTD3);
     // Enable interrupt pin bank
-    PCICR |= (1<<PCIE2)|(1<<PCIE1);
+    PCICR |= (1 << PCIE2) | (1 << PCIE1);
     // Enable pins for interrupt
-    PCMSK1 |= (1<<PCINT13)|(1<<PCINT12)|(1<<PCINT11)|(1<<PCINT10)|(1<<PCINT9)|(1<<PCINT8);
-    PCMSK2 |= (1<<PCINT22)|(1<<PCINT21)|(1<<PCINT20)|(1<<PCINT19);
+    PCMSK1 |= (1 << PCINT13) | (1 << PCINT12) | (1 << PCINT11) | (1 << PCINT10) | (1 << PCINT9) | (1 << PCINT8);
+    PCMSK2 |= (1 << PCINT22) | (1 << PCINT21) | (1 << PCINT20) | (1 << PCINT19);
 }
 
-void init_LED() {
-    // Set pin for LED to output
-    DDRD |= (1<<DDD7);
+/*
+ * Initializes the DIN related Pins.
+ */
+void init_DIN() {
+    // Set Fog_Relais to output (Pin D8)
+    DDRB |= (1<<DDB0);
 }
 
 /*
@@ -158,25 +163,25 @@ ISR(USART_RX_vect) {
 int main() {
     init_DIP_switch();
     init_UART();
-    init_LED();
+    init_DIN();
     set_DMX_address_from_DIP_switch();
-    // ToDo: Remove (Only testing)
-    DDRB |= (1<<DDD1);
-    PORTB |= (1<<PORTB1);
-    // TODO END
     flush_DMX();
     sei();
     while(1) {
         if(DMX_value > 250) {
-            // "On" path
-            //ToDo: Martin Protocol (/LED for testing)
-            PORTB &= ~(1<<PORTB1);
-            ;
+            // DMX value "On" path
+            //Fog_Relais ON (Pin D8)
+            PORTB |= (1<<PORTB0);
         } else {
-            // "Off" path
-            PORTB |= (1<<PORTB1);
-            ;;
+            // DMX value "Off" path
+            // Fog_Relais OFF (Pin D8)
+            PORTB &= ~(1<<PORTB0);
         }
-        _delay_ms(20); //ToDo: Set proper delay time
+        // Perfect would be 1 ms because 250K Baud and 512 Channel per Universe.
+        // This is very fast, and we don't need this high speed,
+        // because we don't change the signal at this high rates with a fader.
+        // Even if the signal change reaction would be delayed by 20 ms we won't recognize it,
+        // and it reduces a lot of load on the microcontroller.
+        _delay_ms(20);
     }
 }
