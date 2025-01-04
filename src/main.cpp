@@ -1,6 +1,8 @@
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include <util/delay.h>
+#include "../lib/DMX_Switch.h"
+#include "../lib/MartinSM850FogMachine.h"
 
 #define F_CPU 16000000UL
 
