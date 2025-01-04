@@ -168,12 +168,12 @@ int main() {
     flush_DMX();
     sei();
     while(1) {
-        if(DMX_value > 250) {
+        if(DMX_value > 250 && DMX_address != 0) {
             // DMX value "On" path
             //Fog_Relais ON (Pin D8)
             PORTB |= (1<<PORTB0);
         } else {
-            // DMX value "Off" path
+            // DMX value "Off" path or DMX address invalid
             // Fog_Relais OFF (Pin D8)
             PORTB &= ~(1<<PORTB0);
         }

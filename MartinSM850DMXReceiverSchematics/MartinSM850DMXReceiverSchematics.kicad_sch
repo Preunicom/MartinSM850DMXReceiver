@@ -5479,7 +5479,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_1x03_P1.00mm_Vertical"
 			(at 34.29 158.75 0)
 			(effects
 				(font
@@ -5550,7 +5550,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Array_SIP4"
 			(at 203.2 38.862 90)
 			(effects
 				(font
@@ -5618,7 +5618,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm"
 			(at 44.45 76.2 0)
 			(effects
 				(font
@@ -5685,7 +5685,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_1x03_P1.00mm_Vertical"
 			(at 34.29 148.59 0)
 			(effects
 				(font
@@ -5758,7 +5758,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Socket:DIP_Socket-24_W4.3_W5.08_W7.62_W10.16_W10.9_3M_224-5248-00-0602J"
 			(at 82.55 137.16 0)
 			(effects
 				(font
@@ -5843,7 +5843,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm"
 			(at 233.172 44.45 90)
 			(effects
 				(font
@@ -5911,7 +5911,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_1x05_P1.00mm_Vertical"
 			(at 271.78 62.23 0)
 			(effects
 				(font
@@ -5988,7 +5988,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm"
 			(at 257.81 49.53 0)
 			(effects
 				(font
@@ -6055,7 +6055,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm"
 			(at 222.25 35.56 0)
 			(effects
 				(font
@@ -6122,7 +6122,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx10_Slide_9.78x27.58mm_W8.61mm_P2.54mm"
 			(at 50.8 50.8 0)
 			(effects
 				(font
@@ -6245,7 +6245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Array_SIP4"
 			(at 66.802 153.67 90)
 			(effects
 				(font
@@ -6312,7 +6312,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_arduino-library:Arduino_Pro_Mini_Socket"
+		(property "Footprint" "Module:Arduino_Nano"
 			(at 127 104.14 0)
 			(effects
 				(font
@@ -6475,7 +6475,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Array_SIP4"
 			(at 55.88 77.978 90)
 			(effects
 				(font
@@ -6545,7 +6545,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Axial_L10.0mm_D4.5mm_P15.00mm_Horizontal"
 			(at 101.9048 149.86 0)
 			(effects
 				(font
@@ -6613,7 +6613,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Array_SIP4"
 			(at 170.18 137.922 90)
 			(effects
 				(font
@@ -6681,7 +6681,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm"
 			(at 158.75 139.7 0)
 			(effects
 				(font
