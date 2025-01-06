@@ -1,0 +1,9 @@
+.pio
+.idea/
+test
+include
+.DS_STORE
+MartinSM850DMXReceiverSchematics/*
+lib/README
+!arduino-library.kicad_sym
+!MartinSM850DMXReceiverSchematics.kicad_sch

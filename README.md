@@ -1,20 +1,22 @@
 # Martin SM850 DMX-Receiver
 Adapter from DMX to Martin fog control for Martin SM850
 
+---
+
 ## User Manual
 ### Status LEDs
-- Blue LED
-    - LED ON: Circuit powered
-    - LED OFF: Circuit not powered
-- Green LED next to the DIP Switch: 
-  - LED ON: DMX address valid 
-  - LED OFF: DMX address invalid
-- Green LED next to the DIN connector 
+- Blue LED (Power_LED/"Power")
+  - LED ON: Circuit powered
+  - LED OFF: Circuit not powered
+- Green LED (DIN_Ready_LED/"Ready")
   - LED ON: Fog machine ready
   - LED OFF: Fog machine not ready or not connected
-- White LED
+- White LED (Fogging_LED/"Fogging")
   - LED ON: Currently sending a fogging signal
   - LED OFF: Currently not sending a fogging signal
+- Green LED (Valid_Address_LED/"Adr. valid")
+  - LED ON: DMX address valid
+  - LED OFF: DMX address invalid
 
 ### DMX control
 The fog machine is fogging when
@@ -31,14 +33,16 @@ Each switch represents a number (see next table).
 | Number | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 |
 
 The fog machine only needs one channel so the lowest possible DMX address is 1 and the highest possible DMX address is 512.
-Addresses outside this range are invalid. This is shown by the green status LED next to the DIP switch.
+Addresses outside this range are invalid. This is shown by the green status LED next to the address input switches.
 
 ### Power
 The power is taken by the DIN connection with the fog machine.
 
 ### Connecting
 Connect the DIN connector with a 5 pin 180° DIN cable with the "WIRELESS CONTROLLER" connector of the fog machine.
-Connect the DMX connector with a 3 pin DMX cable with your DMX bus topology.
+Connect the DMX connector with one or two 3 pin DMX cable with your DMX bus topology.
+
+---
 
 ## Martin SM850 Specifications
 ### Pin assignment of wireless controller DIN Connector
@@ -55,7 +59,10 @@ The picture is looking at the female connector in the fog machine.
 |  4  |             blue             |      FOGGING      |    0V    |
 |  5  |            green             |        GND        |    0V    |
 
-Short pin 4 and 5 to fog.
+Short pin 4 and 5 to fog. <br>
+Connect a LED directly connected to pin 1 (+/anode) and 5 (-/cathode) to get ready state.
+
+---
 
 ## Hardware
 ### Components
